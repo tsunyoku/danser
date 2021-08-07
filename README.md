@@ -4,11 +4,7 @@
 
 # danser-go
 
-[![GitHub release](https://img.shields.io/github/release/wieku/danser-go.svg)](https://github.com/Wieku/danser-go/releases/latest)
-[![CodeFactor](https://www.codefactor.io/repository/github/wieku/danser-go/badge)](https://www.codefactor.io/repository/github/wieku/danser-go)
-[![Discord server](https://img.shields.io/discord/713705871758065685.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/UTPvbe8)
-
-danser-go is a CLI visualisation tool for osu!standard maps.
+danser-go is a CLI visualisation tool for osu!standard maps. This fork is an edited version with Iteki's PP system in mind.
 
 As danser is in development phase, some things may break. If that happens please fill an issue with as much detail as possible.
 

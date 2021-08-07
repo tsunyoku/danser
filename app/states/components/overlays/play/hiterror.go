@@ -190,7 +190,7 @@ func (meter *HitErrorMeter) Draw(batch *batch.QuadBatch, alpha float64) {
 		batch.SetColor(1, 1, 1, meterAlpha)
 		meter.errorDisplay.Draw(meter.lastTime, batch)
 
-		if settings.Gameplay.HitErrorMeter.ShowUnstableRate {
+		if settings.Gameplay.HitErrorMeter.ShowUnstableRate && !meter.diff.Mods.Active(difficulty.Relax) {
 			pY := meter.Height - (errorBase*4+3.75)*settings.Gameplay.HitErrorMeter.Scale
 			scale := settings.Gameplay.HitErrorMeter.UnstableRateScale
 

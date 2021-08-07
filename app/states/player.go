@@ -696,7 +696,7 @@ func (player *Player) Draw(float64) {
 		}
 	}
 
-	player.drawCoin()
+	//player.drawCoin()
 
 	scale2 := player.Scl
 	if !settings.Cursor.ScaleToTheBeat {
@@ -794,23 +794,6 @@ func (player *Player) drawEpilepsyWarning() {
 	player.batch.ResetTransform()
 	player.batch.End()
 	player.batch.SetColor(1, 1, 1, 1)
-}
-
-func (player *Player) drawCoin() {
-	if player.fxGlider.GetValue() < 0.01 {
-		return
-	}
-
-	player.batch.Begin()
-	player.batch.ResetTransform()
-	player.batch.SetColor(1, 1, 1, player.fxGlider.GetValue())
-	player.batch.SetCamera(mgl32.Ortho(float32(-settings.Graphics.GetWidthF()/2), float32(settings.Graphics.GetWidthF()/2), float32(settings.Graphics.GetHeightF()/2), float32(-settings.Graphics.GetHeightF()/2), 1, -1))
-
-	player.coin.DrawVisualiser(settings.Playfield.Logo.DrawSpectrum)
-	player.coin.Draw(player.progressMsF, player.batch)
-
-	player.batch.ResetTransform()
-	player.batch.End()
 }
 
 func (player *Player) drawHUD(cursorColors []color2.Color) {

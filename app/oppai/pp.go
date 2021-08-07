@@ -104,10 +104,28 @@ func (pp *PPv2) PPv2x(aimStars, speedStars float64,
 	speed := pp.computeSpeedValue()
 	accuracy := pp.computeAccuracyValue()
 
-	pp.Total = math.Pow(
-		math.Pow(aim, 1.1)+math.Pow(speed, 1.1)+
-			math.Pow(accuracy, 1.1),
-		1.0/1.1) * finalMultiplier
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		pp.Total = math.Pow(
+			math.Pow(aim, 1.16) + math.Pow(accuracy, 1.13),
+			1.0 / 1.1) * finalMultiplier
+	} else {
+		pp.Total = math.Pow(
+			math.Pow(aim, 1.1)+math.Pow(speed, 1.1)+
+				math.Pow(accuracy, 1.1),
+			1.0/1.1) * finalMultiplier
+	}
+
+	// this is only here because my dumb ass fucked this up on iteki's gulag...
+	// gone soon!
+	if diff.Mods.Active(difficulty.Relax) && diff.Mods.Active(difficulty.DoubleTime) {
+		if pp.accuracy > 98.7 {
+			pp.Total *= 1.03
+		}
+
+		if pp.accuracy < 97.7 {
+			pp.Total *= 0.97
+		}
+	}
 
 	return *pp
 }
@@ -129,9 +147,13 @@ func (pp *PPv2) computeAimValue() float64 {
 
 	aimValue *= lengthBonus
 
-	// Penalize misses by assessing # of misses relative to the total # of objects. Default a 3% reduction for any # of misses.
-	if pp.countMiss > 0 {
-		aimValue *= 0.97 * math.Pow(1-math.Pow(float64(pp.countMiss)/float64(pp.totalHits), 0.775), float64(pp.countMiss))
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		aimValue *= math.Pow(0.97, float64(pp.countMiss) + float64(pp.countMeh) * 0.35)
+	} else {
+		// Penalize misses by assessing # of misses relative to the total # of objects. Default a 3% reduction for any # of misses.
+		if pp.countMiss > 0 {
+			aimValue *= 0.97 * math.Pow(1-math.Pow(float64(pp.countMiss)/float64(pp.totalHits), 0.775), float64(pp.countMiss))
+		}
 	}
 
 	// Combo scaling
@@ -140,17 +162,37 @@ func (pp *PPv2) computeAimValue() float64 {
 	}
 
 	approachRateFactor := 0.0
-	if pp.diff.ARReal > 10.33 {
-		approachRateFactor += 0.4 * (pp.diff.ARReal - 10.33)
-	} else if pp.diff.ARReal < 8.0 {
-		approachRateFactor += 0.01 * (8.0 - pp.diff.ARReal)
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		approachRateFactor = 1.0
 	}
 
-	aimValue *= 1.0 + math.Min(approachRateFactor, approachRateFactor*(float64(pp.totalHits)/1000.0))
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		if pp.diff.ARReal > 10.67 {
+			approachRateFactor += math.Pow(pp.diff.ARReal - 10.67, 1.75)
+		} else if pp.diff.ARReal < 9.5 {
+			approachRateFactor += 0.05 * (9.5 - pp.diff.ARReal)
+		}
+	} else { 
+		if pp.diff.ARReal > 10.33 {
+			approachRateFactor += 0.4 * (pp.diff.ARReal - 10.33)
+		} else if pp.diff.ARReal < 8.0 {
+			approachRateFactor += 0.01 * (8.0 - pp.diff.ARReal)
+		}
+	}
+
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		aimValue *= approachRateFactor
+	} else {
+		aimValue *= 1.0 + math.Min(approachRateFactor, approachRateFactor*(float64(pp.totalHits)/1000.0))
+	}
 
 	// We want to give more reward for lower AR when it comes to aim and HD. This nerfs high AR and buffs lower AR.
 	if pp.diff.Mods.Active(difficulty.Hidden) {
-		aimValue *= 1.0 + 0.04*(12.0-pp.diff.ARReal)
+		if pp.diff.Mods.Active(difficulty.Relax) {
+			aimValue *= 1.0 + 0.05 * (11.0 - pp.diff.ARReal)
+		} else {
+			aimValue *= 1.0 + 0.04*(12.0-pp.diff.ARReal)
+		}
 	}
 
 	if pp.diff.Mods.Active(difficulty.Flashlight) {
@@ -185,9 +227,13 @@ func (pp *PPv2) computeSpeedValue() float64 {
 
 	speedValue *= lengthBonus
 
-	// Penalize misses by assessing # of misses relative to the total # of objects. Default a 3% reduction for any # of misses.
-	if pp.countMiss > 0 {
-		speedValue *= 0.97 * math.Pow(1-math.Pow(float64(pp.countMiss)/float64(pp.totalHits), 0.775), math.Pow(float64(pp.countMiss), 0.875))
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		speedValue *= math.Pow(0.97, float64(pp.countMiss) + float64(pp.countMeh) * 0.35)
+	} else {
+		// Penalize misses by assessing # of misses relative to the total # of objects. Default a 3% reduction for any # of misses.
+		if pp.countMiss > 0 {
+			speedValue *= 0.97 * math.Pow(1-math.Pow(float64(pp.countMiss)/float64(pp.totalHits), 0.775), math.Pow(float64(pp.countMiss), 0.875))
+		}
 	}
 
 	// Combo scaling
@@ -196,26 +242,58 @@ func (pp *PPv2) computeSpeedValue() float64 {
 	}
 
 	approachRateFactor := 0.0
-	if pp.diff.ARReal > 10.33 {
-		approachRateFactor += 0.4 * (pp.diff.ARReal - 10.33)
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		approachRateFactor = 1.0
 	}
 
-	speedValue *= 1.0 + math.Min(approachRateFactor, approachRateFactor*(float64(pp.totalHits)/1000.0))
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		if pp.diff.ARReal > 10.67 {
+			approachRateFactor += math.Pow(pp.diff.ARReal - 10.67, 1.75)
+		} else if pp.diff.ARReal < 9.5 {
+			approachRateFactor += 0.05 * (9.5 - pp.diff.ARReal)
+		}
+	} else { 
+		if pp.diff.ARReal > 10.33 {
+			approachRateFactor += 0.4 * (pp.diff.ARReal - 10.33)
+		} else if pp.diff.ARReal < 8.0 {
+			approachRateFactor += 0.01 * (8.0 - pp.diff.ARReal)
+		}
+	}
+
+	if pp.diff.ARReal > 10.33 {
+		if pp.diff.Mods.Active(difficulty.Relax) {
+			speedValue *= approachRateFactor
+		} else {
+			speedValue *= 1.0 + math.Min(approachRateFactor, approachRateFactor*(float64(pp.totalHits)/1000.0))
+		}
+	}
 
 	if pp.diff.Mods.Active(difficulty.Hidden) {
-		speedValue *= 1.0 + 0.04*(12.0-pp.diff.ARReal)
+		if pp.diff.Mods.Active(difficulty.Relax) {
+			speedValue *= 1.0 + 0.05 * (11.0 - pp.diff.ARReal)
+		} else {
+			speedValue *= 1.0 + 0.04*(12.0-pp.diff.ARReal)
+		}
 	}
 
-	// Scale the speed value with accuracy and OD
-	speedValue *= (0.95 + math.Pow(pp.diff.ODReal, 2)/750) * math.Pow(pp.accuracy, (14.5-math.Max(pp.diff.ODReal, 8))/2)
-	// Scale the speed value with # of 50s to punish doubletapping.
-
-	mehMult := 0.0
-	if float64(pp.countMeh) >= float64(pp.totalHits)/500 {
-		mehMult = float64(pp.countMeh) - float64(pp.totalHits)/500.0
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		speedValue *= 0.02 + pp.accuracy
+	} else {
+		// Scale the speed value with accuracy and OD
+		speedValue *= (0.95 + math.Pow(pp.diff.ODReal, 2)/750) * math.Pow(pp.accuracy, (14.5-math.Max(pp.diff.ODReal, 8))/2)
 	}
 
-	speedValue *= math.Pow(0.98, mehMult)
+	if pp.diff.Mods.Active(difficulty.Relax) {
+		speedValue *= 0.96 + (math.Pow(pp.diff.ODReal, 2) / 1600)
+	} else {
+		// Scale the speed value with # of 50s to punish doubletapping.
+		mehMult := 0.0
+		if float64(pp.countMeh) >= float64(pp.totalHits)/500 {
+			mehMult = float64(pp.countMeh) - float64(pp.totalHits)/500.0
+		}
+
+		speedValue *= math.Pow(0.98, mehMult)
+	}
 
 	return speedValue
 }
