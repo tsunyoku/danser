@@ -6,37 +6,6 @@
 
 danser-go is a CLI visualisation tool for osu!standard maps. This fork is an edited version with Iteki's PP system in mind.
 
-As danser is in development phase, some things may break. If that happens please fill an issue with as much detail as possible.
-
-**WARNING**: Because of MacOS' poor OpenGL support, danser-go won't run on that platform. Please use dual-booted Windows/Linux instead.
-
-## Examples
-* [Omoi - Chiisana Koi no Uta (Synth Rock Cover) [Kroytz's EX EX] - TAG2 Mirror Collage](https://youtu.be/Vo0Pbpu113Y)
-* [Sex Whales & Fraxo - Dead To Me (feat. Lox Chatterbox) [extrad1881 (ar 10)] Mirror Collage](https://youtu.be/KCHqrVGdXrk)
-* [Nightcore - Flower Dance [Amachoco ARX.7] Mandala Mirror Collage](https://youtu.be/HBC89S-UwFc)
-* [Flower Dance (osu! cursordance)](https://youtu.be/lcnnz3fN3bs)
-* [osu! top 50 replays knockout | xi - FREEDOM DiVE [ENDLESS DiMENSiONS]](https://www.youtu.be/kzr_Sr0Shuc)
-* [osu! top 50 knockout | YURRY CANNON - Suicide Parade [Sakase]](https://youtu.be/GS_yoq5MJMU)
-* [osu! top 50 replays knockout | Kobaryo - Bookmaker [Corrupt The World]](https://youtu.be/SJqkP1IDUq0)
-
-## Running Danser
-
-You can download the newest Windows/Linux 64-bit binaries from [releases](https://github.com/Wieku/danser-go/releases).
-
-After unpacking it to your desired directory, you need to run it using a command-line application/terminal:
-
-##### Windows cmd:
-```bash
-danser <arguments>
-```
-
-##### Linux / Unix / git bash / Powershell:
-```bash
-./danser <arguments>
-```
-
-If you try to run Danser without any arguments there's a surprise waiting for you ;)
-
 ## Run arguments
 * `-artist="NOMA"` or `-a="NOMA"`
 * `-title="Brain Power"` or `-t="Brain Power"`
