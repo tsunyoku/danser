@@ -115,18 +115,6 @@ func (pp *PPv2) PPv2x(aimStars, speedStars float64,
 			1.0/1.1) * finalMultiplier
 	}
 
-	// this is only here because my dumb ass fucked this up on iteki's gulag...
-	// gone soon!
-	if diff.Mods.Active(difficulty.Relax) && diff.Mods.Active(difficulty.DoubleTime) {
-		if pp.accuracy > 98.7 {
-			pp.Total *= 1.03
-		}
-
-		if pp.accuracy < 97.7 {
-			pp.Total *= 0.97
-		}
-	}
-
 	return *pp
 }
 
