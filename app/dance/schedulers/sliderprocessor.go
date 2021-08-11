@@ -1,7 +1,7 @@
 package schedulers
 
 import (
-	"github.com/wieku/danser-go/app/beatmap/objects"
+	"github.com/tsunyoku/danser/app/beatmap/objects"
 	"sort"
 )
 

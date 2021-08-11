@@ -1,7 +1,7 @@
 package utils
 
 import (
-	color2 "github.com/wieku/danser-go/framework/math/color"
+	color2 "github.com/tsunyoku/danser/framework/math/color"
 	"math"
 )
 

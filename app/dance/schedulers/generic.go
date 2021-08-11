@@ -1,14 +1,14 @@
 package schedulers
 
 import (
-	"github.com/wieku/danser-go/app/beatmap/difficulty"
-	"github.com/wieku/danser-go/app/beatmap/objects"
-	"github.com/wieku/danser-go/app/dance/input"
-	"github.com/wieku/danser-go/app/dance/movers"
-	"github.com/wieku/danser-go/app/dance/spinners"
-	"github.com/wieku/danser-go/app/graphics"
-	"github.com/wieku/danser-go/app/settings"
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/app/beatmap/difficulty"
+	"github.com/tsunyoku/danser/app/beatmap/objects"
+	"github.com/tsunyoku/danser/app/dance/input"
+	"github.com/tsunyoku/danser/app/dance/movers"
+	"github.com/tsunyoku/danser/app/dance/spinners"
+	"github.com/tsunyoku/danser/app/graphics"
+	"github.com/tsunyoku/danser/app/settings"
+	"github.com/tsunyoku/danser/framework/math/vector"
 	"math"
 	"math/rand"
 )

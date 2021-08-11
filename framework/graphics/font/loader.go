@@ -1,8 +1,8 @@
 package font
 
 import (
-	"github.com/wieku/danser-go/app/utils"
-	"github.com/wieku/danser-go/framework/graphics/texture"
+	"github.com/tsunyoku/danser/app/utils"
+	"github.com/tsunyoku/danser/framework/graphics/texture"
 	"golang.org/x/image/font"
 	"golang.org/x/image/font/opentype"
 	"golang.org/x/image/font/sfnt"

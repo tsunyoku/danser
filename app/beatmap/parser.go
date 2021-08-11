@@ -2,11 +2,11 @@ package beatmap
 
 import (
 	"errors"
-	"github.com/wieku/danser-go/app/beatmap/objects"
-	"github.com/wieku/danser-go/app/bmath"
-	"github.com/wieku/danser-go/app/settings"
-	"github.com/wieku/danser-go/app/skin"
-	"github.com/wieku/danser-go/framework/util"
+	"github.com/tsunyoku/danser/app/beatmap/objects"
+	"github.com/tsunyoku/danser/app/bmath"
+	"github.com/tsunyoku/danser/app/settings"
+	"github.com/tsunyoku/danser/app/skin"
+	"github.com/tsunyoku/danser/framework/util"
 	"math"
 	"os"
 	"path/filepath"

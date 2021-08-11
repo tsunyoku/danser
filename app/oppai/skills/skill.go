@@ -1,8 +1,8 @@
 package skills
 
 import (
-	"github.com/wieku/danser-go/app/beatmap/difficulty"
-	"github.com/wieku/danser-go/app/oppai/preprocessing"
+	"github.com/tsunyoku/danser/app/beatmap/difficulty"
+	"github.com/tsunyoku/danser/app/oppai/preprocessing"
 	"math"
 	"sort"
 )

@@ -1,8 +1,8 @@
 package input
 
 import (
-	"github.com/wieku/danser-go/app/graphics"
-	"github.com/wieku/danser-go/app/rulesets/osu"
+	"github.com/tsunyoku/danser/app/graphics"
+	"github.com/tsunyoku/danser/app/rulesets/osu"
 )
 
 type RelaxInputProcessor struct {

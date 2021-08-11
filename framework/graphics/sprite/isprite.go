@@ -2,10 +2,10 @@ package sprite
 
 import (
 	"github.com/go-gl/mathgl/mgl32"
-	"github.com/wieku/danser-go/framework/graphics/batch"
-	"github.com/wieku/danser-go/framework/math/animation"
-	color2 "github.com/wieku/danser-go/framework/math/color"
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/framework/graphics/batch"
+	"github.com/tsunyoku/danser/framework/math/animation"
+	color2 "github.com/tsunyoku/danser/framework/math/color"
+	"github.com/tsunyoku/danser/framework/math/vector"
 )
 
 type ISprite interface {

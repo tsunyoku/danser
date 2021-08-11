@@ -2,8 +2,8 @@ package ffmpeg
 
 import (
 	"fmt"
-	"github.com/wieku/danser-go/app/settings"
-	"github.com/wieku/danser-go/framework/math/animation/easing"
+	"github.com/tsunyoku/danser/app/settings"
+	"github.com/tsunyoku/danser/framework/math/animation/easing"
 	"math"
 	"strconv"
 	"strings"

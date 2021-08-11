@@ -1,10 +1,10 @@
 package storyboard
 
 import (
-	"github.com/wieku/danser-go/app/bmath"
-	"github.com/wieku/danser-go/framework/math/animation"
-	"github.com/wieku/danser-go/framework/math/animation/easing"
-	color2 "github.com/wieku/danser-go/framework/math/color"
+	"github.com/tsunyoku/danser/app/bmath"
+	"github.com/tsunyoku/danser/framework/math/animation"
+	"github.com/tsunyoku/danser/framework/math/animation/easing"
+	color2 "github.com/tsunyoku/danser/framework/math/color"
 	"log"
 	"strconv"
 	"strings"

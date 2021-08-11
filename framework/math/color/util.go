@@ -1,8 +1,8 @@
 package color
 
 import (
-	"github.com/wieku/danser-go/app/bmath"
-	"github.com/wieku/danser-go/framework/math/math32"
+	"github.com/tsunyoku/danser/app/bmath"
+	"github.com/tsunyoku/danser/framework/math/math32"
 	"math"
 )
 

@@ -1,7 +1,7 @@
 package objects
 
 import (
-	"github.com/wieku/danser-go/app/bmath"
+	"github.com/tsunyoku/danser/app/bmath"
 	"math"
 )
 

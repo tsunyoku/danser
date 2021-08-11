@@ -50,7 +50,7 @@ Examples which should give the same result:
 <executable> -md5=59f3708114c73b2334ad18f31ef49046 -tag=2
 ```
 
-Settings and knockout usage are detailed in the [wiki](https://github.com/Wieku/danser-go/wiki).
+Settings and knockout usage are detailed in the [wiki](https://github.com/tsunyoku/danser/wiki).
 
 ## Building the project
 You need to clone it or download as a .zip (and unpack it to desired directory)

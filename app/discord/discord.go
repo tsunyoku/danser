@@ -3,9 +3,9 @@ package discord
 import (
 	"fmt"
 	"github.com/nattawitc/rich-go/client"
-	"github.com/wieku/danser-go/app/graphics"
-	"github.com/wieku/danser-go/app/settings"
-	"github.com/wieku/danser-go/build"
+	"github.com/tsunyoku/danser/app/graphics"
+	"github.com/tsunyoku/danser/app/settings"
+	"github.com/tsunyoku/danser/build"
 	"log"
 	"sync"
 	"time"

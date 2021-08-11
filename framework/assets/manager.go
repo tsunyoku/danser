@@ -2,7 +2,7 @@ package assets
 
 import (
 	"archive/zip"
-	"github.com/wieku/danser-go/framework/graphics/texture"
+	"github.com/tsunyoku/danser/framework/graphics/texture"
 	"io"
 	"io/ioutil"
 	"log"

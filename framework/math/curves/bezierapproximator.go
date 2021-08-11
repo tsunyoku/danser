@@ -1,7 +1,7 @@
 package curves
 
 import (
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/framework/math/vector"
 	"sync"
 )
 

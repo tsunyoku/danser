@@ -1,9 +1,9 @@
 package common
 
 import (
-	"github.com/wieku/danser-go/app/beatmap"
-	"github.com/wieku/danser-go/framework/bass"
-	"github.com/wieku/danser-go/framework/graphics/sprite"
+	"github.com/tsunyoku/danser/app/beatmap"
+	"github.com/tsunyoku/danser/framework/bass"
+	"github.com/tsunyoku/danser/framework/graphics/sprite"
 	"math"
 )
 

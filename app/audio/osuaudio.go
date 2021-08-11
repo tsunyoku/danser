@@ -1,10 +1,10 @@
 package audio
 
 import (
-	"github.com/wieku/danser-go/app/bmath"
-	"github.com/wieku/danser-go/app/settings"
-	"github.com/wieku/danser-go/app/skin"
-	"github.com/wieku/danser-go/framework/bass"
+	"github.com/tsunyoku/danser/app/bmath"
+	"github.com/tsunyoku/danser/app/settings"
+	"github.com/tsunyoku/danser/app/skin"
+	"github.com/tsunyoku/danser/framework/bass"
 	"os"
 	"path/filepath"
 	"strconv"

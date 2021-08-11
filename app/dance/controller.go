@@ -1,13 +1,13 @@
 package dance
 
 import (
-	"github.com/wieku/danser-go/app/beatmap"
-	"github.com/wieku/danser-go/app/beatmap/objects"
-	"github.com/wieku/danser-go/app/dance/movers"
-	"github.com/wieku/danser-go/app/dance/schedulers"
-	"github.com/wieku/danser-go/app/dance/spinners"
-	"github.com/wieku/danser-go/app/graphics"
-	"github.com/wieku/danser-go/app/settings"
+	"github.com/tsunyoku/danser/app/beatmap"
+	"github.com/tsunyoku/danser/app/beatmap/objects"
+	"github.com/tsunyoku/danser/app/dance/movers"
+	"github.com/tsunyoku/danser/app/dance/schedulers"
+	"github.com/tsunyoku/danser/app/dance/spinners"
+	"github.com/tsunyoku/danser/app/graphics"
+	"github.com/tsunyoku/danser/app/settings"
 	"strings"
 )
 

@@ -5,9 +5,9 @@ import (
 	"github.com/faiface/mainthread"
 	"github.com/go-gl/gl/v3.3-core/gl"
 	"github.com/go-gl/mathgl/mgl32"
-	"github.com/wieku/danser-go/framework/graphics/attribute"
-	"github.com/wieku/danser-go/framework/graphics/history"
-	"github.com/wieku/danser-go/framework/math/color"
+	"github.com/tsunyoku/danser/framework/graphics/attribute"
+	"github.com/tsunyoku/danser/framework/graphics/history"
+	"github.com/tsunyoku/danser/framework/math/color"
 	"log"
 	"runtime"
 )

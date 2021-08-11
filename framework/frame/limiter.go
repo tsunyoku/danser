@@ -1,8 +1,8 @@
 package frame
 
 import (
-	"github.com/wieku/danser-go/app/bmath"
-	"github.com/wieku/danser-go/framework/qpc"
+	"github.com/tsunyoku/danser/app/bmath"
+	"github.com/tsunyoku/danser/framework/qpc"
 	"runtime"
 	"time"
 )

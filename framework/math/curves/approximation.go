@@ -1,7 +1,7 @@
 package curves
 
 import (
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/framework/math/vector"
 )
 
 func ApproximateCircularArc(pt1, pt2, pt3 vector.Vector2f, detail float32) []Linear {

@@ -1,8 +1,8 @@
 package oppai
 
 import (
-	"github.com/wieku/danser-go/app/beatmap/difficulty"
-	"github.com/wieku/danser-go/app/bmath"
+	"github.com/tsunyoku/danser/app/beatmap/difficulty"
+	"github.com/tsunyoku/danser/app/bmath"
 	"math"
 )
 

@@ -1,8 +1,8 @@
 package input
 
 import (
-	"github.com/wieku/danser-go/app/beatmap/objects"
-	"github.com/wieku/danser-go/app/graphics"
+	"github.com/tsunyoku/danser/app/beatmap/objects"
+	"github.com/tsunyoku/danser/app/graphics"
 )
 
 type NaturalInputProcessor struct {

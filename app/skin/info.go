@@ -2,9 +2,9 @@ package skin
 
 import (
 	"fmt"
-	"github.com/wieku/danser-go/framework/assets"
-	"github.com/wieku/danser-go/framework/math/color"
-	"github.com/wieku/danser-go/framework/util"
+	"github.com/tsunyoku/danser/framework/assets"
+	"github.com/tsunyoku/danser/framework/math/color"
+	"github.com/tsunyoku/danser/framework/util"
 	"io"
 	"os"
 	"sort"

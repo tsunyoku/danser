@@ -1,9 +1,9 @@
 package beatmap
 
 import (
-	"github.com/wieku/danser-go/app/beatmap/difficulty"
-	"github.com/wieku/danser-go/app/beatmap/objects"
-	"github.com/wieku/danser-go/app/settings"
+	"github.com/tsunyoku/danser/app/beatmap/difficulty"
+	"github.com/tsunyoku/danser/app/beatmap/objects"
+	"github.com/tsunyoku/danser/app/settings"
 	"math"
 )
 

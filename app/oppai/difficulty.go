@@ -2,10 +2,10 @@ package oppai
 
 import (
 	"fmt"
-	"github.com/wieku/danser-go/app/beatmap/difficulty"
-	"github.com/wieku/danser-go/app/beatmap/objects"
-	"github.com/wieku/danser-go/app/oppai/preprocessing"
-	"github.com/wieku/danser-go/app/oppai/skills"
+	"github.com/tsunyoku/danser/app/beatmap/difficulty"
+	"github.com/tsunyoku/danser/app/beatmap/objects"
+	"github.com/tsunyoku/danser/app/oppai/preprocessing"
+	"github.com/tsunyoku/danser/app/oppai/skills"
 	"log"
 	"math"
 )

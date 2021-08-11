@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"github.com/faiface/mainthread"
 	"github.com/go-gl/gl/v3.3-core/gl"
-	"github.com/wieku/danser-go/framework/graphics/history"
-	"github.com/wieku/danser-go/framework/statistic"
+	"github.com/tsunyoku/danser/framework/graphics/history"
+	"github.com/tsunyoku/danser/framework/statistic"
 	"runtime"
 )
 

@@ -1,7 +1,7 @@
 package animation
 
 import (
-	"github.com/wieku/danser-go/framework/math/animation/easing"
+	"github.com/tsunyoku/danser/framework/math/animation/easing"
 	"math"
 	"sort"
 )

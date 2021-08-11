@@ -1,11 +1,11 @@
 package play
 
 import (
-	"github.com/wieku/danser-go/app/bmath"
-	"github.com/wieku/danser-go/app/skin"
-	"github.com/wieku/danser-go/framework/graphics/batch"
-	"github.com/wieku/danser-go/framework/graphics/sprite"
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/app/bmath"
+	"github.com/tsunyoku/danser/app/skin"
+	"github.com/tsunyoku/danser/framework/graphics/batch"
+	"github.com/tsunyoku/danser/framework/graphics/sprite"
+	"github.com/tsunyoku/danser/framework/math/vector"
 )
 
 type HitCounter struct {

@@ -1,8 +1,8 @@
 package settings
 
 import (
-	"github.com/wieku/danser-go/app/utils"
-	color2 "github.com/wieku/danser-go/framework/math/color"
+	"github.com/tsunyoku/danser/app/utils"
+	color2 "github.com/tsunyoku/danser/framework/math/color"
 	"math"
 )
 

@@ -1,15 +1,15 @@
 package graphics
 
 import (
-	"github.com/wieku/danser-go/app/bmath"
-	"github.com/wieku/danser-go/app/settings"
-	"github.com/wieku/danser-go/framework/assets"
-	"github.com/wieku/danser-go/framework/graphics/attribute"
-	"github.com/wieku/danser-go/framework/graphics/batch"
-	"github.com/wieku/danser-go/framework/graphics/buffer"
-	"github.com/wieku/danser-go/framework/graphics/shader"
-	color2 "github.com/wieku/danser-go/framework/math/color"
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/app/bmath"
+	"github.com/tsunyoku/danser/app/settings"
+	"github.com/tsunyoku/danser/framework/assets"
+	"github.com/tsunyoku/danser/framework/graphics/attribute"
+	"github.com/tsunyoku/danser/framework/graphics/batch"
+	"github.com/tsunyoku/danser/framework/graphics/buffer"
+	"github.com/tsunyoku/danser/framework/graphics/shader"
+	color2 "github.com/tsunyoku/danser/framework/math/color"
+	"github.com/tsunyoku/danser/framework/math/vector"
 	"math"
 	"sync"
 )

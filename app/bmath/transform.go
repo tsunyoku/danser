@@ -1,6 +1,6 @@
 package bmath
 
-import "github.com/wieku/danser-go/framework/math/vector"
+import "github.com/tsunyoku/danser/framework/math/vector"
 
 var Origin = struct {
 	TopLeft,

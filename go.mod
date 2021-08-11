@@ -1,4 +1,4 @@
-module github.com/wieku/danser-go
+module github.com/tsunyoku/danser
 
 go 1.16
 

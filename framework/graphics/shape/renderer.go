@@ -2,14 +2,14 @@ package shape
 
 import (
 	"github.com/go-gl/mathgl/mgl32"
-	"github.com/wieku/danser-go/framework/graphics/attribute"
-	"github.com/wieku/danser-go/framework/graphics/blend"
-	"github.com/wieku/danser-go/framework/graphics/buffer"
-	"github.com/wieku/danser-go/framework/graphics/shader"
-	"github.com/wieku/danser-go/framework/math/color"
-	"github.com/wieku/danser-go/framework/math/math32"
-	"github.com/wieku/danser-go/framework/math/vector"
-	"github.com/wieku/danser-go/framework/statistic"
+	"github.com/tsunyoku/danser/framework/graphics/attribute"
+	"github.com/tsunyoku/danser/framework/graphics/blend"
+	"github.com/tsunyoku/danser/framework/graphics/buffer"
+	"github.com/tsunyoku/danser/framework/graphics/shader"
+	"github.com/tsunyoku/danser/framework/math/color"
+	"github.com/tsunyoku/danser/framework/math/math32"
+	"github.com/tsunyoku/danser/framework/math/vector"
+	"github.com/tsunyoku/danser/framework/statistic"
 )
 
 const defaultRendererSize = 2000

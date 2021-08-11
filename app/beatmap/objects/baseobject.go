@@ -1,10 +1,10 @@
 package objects
 
 import (
-	"github.com/wieku/danser-go/app/audio"
-	"github.com/wieku/danser-go/framework/graphics/batch"
-	color2 "github.com/wieku/danser-go/framework/math/color"
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/app/audio"
+	"github.com/tsunyoku/danser/framework/graphics/batch"
+	color2 "github.com/tsunyoku/danser/framework/math/color"
+	"github.com/tsunyoku/danser/framework/math/vector"
 	"strconv"
 	"strings"
 )

@@ -1,7 +1,7 @@
 package storyboard
 
 import (
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/framework/math/vector"
 )
 
 var Origin = map[string]vector.Vector2d{

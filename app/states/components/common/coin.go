@@ -1,16 +1,16 @@
 package common
 
 import (
-	"github.com/wieku/danser-go/app/beatmap"
-	"github.com/wieku/danser-go/app/graphics/gui/drawables"
-	"github.com/wieku/danser-go/framework/assets"
-	"github.com/wieku/danser-go/framework/bass"
-	"github.com/wieku/danser-go/framework/graphics/batch"
-	"github.com/wieku/danser-go/framework/graphics/sprite"
-	"github.com/wieku/danser-go/framework/graphics/texture"
-	"github.com/wieku/danser-go/framework/math/animation/easing"
-	color2 "github.com/wieku/danser-go/framework/math/color"
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/app/beatmap"
+	"github.com/tsunyoku/danser/app/graphics/gui/drawables"
+	"github.com/tsunyoku/danser/framework/assets"
+	"github.com/tsunyoku/danser/framework/bass"
+	"github.com/tsunyoku/danser/framework/graphics/batch"
+	"github.com/tsunyoku/danser/framework/graphics/sprite"
+	"github.com/tsunyoku/danser/framework/graphics/texture"
+	"github.com/tsunyoku/danser/framework/math/animation/easing"
+	color2 "github.com/tsunyoku/danser/framework/math/color"
+	"github.com/tsunyoku/danser/framework/math/vector"
 )
 
 type DanserCoin struct {

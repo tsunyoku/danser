@@ -3,7 +3,7 @@ package vector
 import (
 	"fmt"
 	"github.com/go-gl/mathgl/mgl32"
-	"github.com/wieku/danser-go/framework/math/math32"
+	"github.com/tsunyoku/danser/framework/math/math32"
 )
 
 type Vector2f struct {

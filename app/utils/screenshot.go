@@ -2,7 +2,7 @@ package utils
 
 import (
 	"github.com/go-gl/gl/v3.3-core/gl"
-	"github.com/wieku/danser-go/framework/graphics/texture"
+	"github.com/tsunyoku/danser/framework/graphics/texture"
 	"log"
 	"os"
 	"time"

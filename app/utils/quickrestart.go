@@ -2,7 +2,7 @@ package utils
 
 import (
 	"github.com/faiface/mainthread"
-	"github.com/wieku/danser-go/app/input"
+	"github.com/tsunyoku/danser/app/input"
 	"os"
 	"os/exec"
 )

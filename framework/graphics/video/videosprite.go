@@ -2,9 +2,9 @@ package video
 
 import (
 	"github.com/faiface/mainthread"
-	"github.com/wieku/danser-go/framework/graphics/sprite"
-	"github.com/wieku/danser-go/framework/graphics/texture"
-	"github.com/wieku/danser-go/framework/math/vector"
+	"github.com/tsunyoku/danser/framework/graphics/sprite"
+	"github.com/tsunyoku/danser/framework/graphics/texture"
+	"github.com/tsunyoku/danser/framework/math/vector"
 )
 
 type Video struct {

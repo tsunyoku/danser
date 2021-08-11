@@ -1,3 +1,3 @@
-module github.com/wieku/danser-go/tools/assets
+module github.com/tsunyoku/danser/tools/assets
 
 go 1.15
