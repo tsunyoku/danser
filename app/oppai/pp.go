@@ -150,7 +150,7 @@ func (pp *PPv2) computeAimValue() float64 {
 
 	if pp.diff.Mods.Active(difficulty.Relax) {
 		if pp.countMiss > 0 {
-			aimValue *= 0.92 * math.Pow(1-math.Pow(float64(pp.countMiss)/float64(pp.totalHits), 0.775), float64(pp.countMiss))
+			aimValue *= 0.95 * math.Pow(1-math.Pow(float64(pp.countMiss)/float64(pp.totalHits), 0.775), float64(pp.countMiss))
 		}
 	} else {
 		// Penalize misses by assessing # of misses relative to the total # of objects. Default a 3% reduction for any # of misses.
@@ -220,7 +220,7 @@ func (pp *PPv2) computeAimValue() float64 {
 			if (pp.accuracy >= 0.97) {
 				aimValue *= 0.4 + pp.accuracy / 2.0
 			} else {
-				aimValue *= 0.2 + pp.accuracy / 2.0
+				aimValue *= 0.3 + pp.accuracy / 2.0
 			}
 		}
 	} else {
